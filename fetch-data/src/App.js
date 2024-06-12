@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
 
   const fetchRandomUser = async () => {
     setLoading(true);
@@ -12,7 +12,7 @@ function App() {
     try {
       const response = await fetch('https://randomuser.me/api/');
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Error...');
       }
       const data = await response.json();
       setUser(data.results[0]);
@@ -38,9 +38,10 @@ function App() {
           <div className="user-info">
             <img src={user.picture.large} alt="User" />
             <p>Name: {`${user.name.first} ${user.name.last}`}</p>
+            <p>Gender: {user.gender}</p>
             <p>Email: {user.email}</p>
             <p>Phone: {user.phone}</p>
-            <p>Location: {`${user.location.city}, ${user.location.country}`}</p>
+            <p>Location: {user.location.country}</p>
           </div>
         )}
       </header>

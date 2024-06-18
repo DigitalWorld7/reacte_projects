@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './styles.css'; // Import the CSS file
+import './styles.css';
 
 const TextHighlighter = () => {
-  const [highlight, setHighlight] = useState(false);
+  const [highlight, setHighlight] = useState();
 
   const highlightText = () => {
     setHighlight(true);
@@ -10,6 +10,7 @@ const TextHighlighter = () => {
 
   return (
     <div className="text-highlighter">
+        <h1 style={{textAlign:'center',color:'purple'}} >HighlightText Task</h1>
       <p>
         "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success."
         <span style={{ backgroundColor: highlight ? 'yellow' : 'transparent' }}>

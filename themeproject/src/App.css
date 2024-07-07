@@ -1,0 +1,53 @@
+body.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+h1{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main {
+  text-align: center;
+  /* border: 5px solid red; */
+  width: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer{
+  width: 140%;
+  display: flex;
+  /* border: 5px solid; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 15px;
+}
+.btn-clr{
+  background-color: #b88dff;
+  font-weight: bold;
+  /* border: 5px solid; */
+  margin-left: 20px;
+}
+
+.btn-clrp{
+  background-color: #ffb0f8;
+  font-weight: bold;
+  /* border: 5px solid; */
+  margin-left: 20px;
+  margin-top: 20px ;
+}
